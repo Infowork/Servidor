@@ -109,11 +109,12 @@ public class HiloCliente3 extends Thread{
 				Integer.parseInt(jobdatos.get("telefono").toString()),
 				jobdatos.get("email").toString(),
 				jobdatos.get("contrasena").toString(),
-				Boolean.parseBoolean(jobdatos.get("dni").toString()),
+				Boolean.parseBoolean(jobdatos.get("urgente").toString()),
 				jobdatos.get("empleo").toString());
 		}catch(ParseException ex){
 			ex.printStackTrace();
 		}
+		System.out.println(datos.toString());
 		return datos;
 	}
 }

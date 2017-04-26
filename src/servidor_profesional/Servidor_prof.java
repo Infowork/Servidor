@@ -37,6 +37,10 @@ public class Servidor_prof {
 					System.out.println("Recibir todos los datos");
 					new HiloProfesional3(cliente).start();
 					break;
+				case "ddd":
+					System.out.println("Comprobar email/contrasena");
+					new HiloProfesional4(cliente).start();
+					break;
 				}
 			}
 		} catch (IOException ex) {

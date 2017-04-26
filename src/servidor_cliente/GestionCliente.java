@@ -147,9 +147,9 @@ public class GestionCliente {
 					+ "or telefono="+dat.getTelefono()+" or email='"+dat.getEmail()+"')";
 			ResultSet rs = st.executeQuery(sql);
 			while(rs.next()){
-				dni=rs.getString(1);
+				dni=rs.getString(2);
 			}
-			
+			System.out.println(dni);
 				
 			// 4. Cierre de conexión
 			cn.close();

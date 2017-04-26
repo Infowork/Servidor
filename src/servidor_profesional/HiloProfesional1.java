@@ -13,7 +13,7 @@ import org.json.simple.parser.ParseException;
 import javabeans.Adicionales;
 import javabeans.Datos;
 import javabeans.Localizacion;
-import javabeans.Puntuacion;
+
 
 
 public class HiloProfesional1 extends Thread{
@@ -21,7 +21,6 @@ public class HiloProfesional1 extends Thread{
 	Datos datos;
 	Localizacion loc;
 	Adicionales ad;
-	//Puntuacion punt;
 	GestionProfesional gp;
 
 
@@ -68,7 +67,7 @@ public class HiloProfesional1 extends Thread{
 					Integer.parseInt(jobdatos.get("telefono").toString()),
 					jobdatos.get("email").toString(),
 					jobdatos.get("contrasena").toString(),
-					Boolean.parseBoolean(jobdatos.get("dni").toString()),
+					Boolean.parseBoolean(jobdatos.get("urgente").toString()),
 					jobdatos.get("empleo").toString());
 			
 			loc=new Localizacion( joblocalizacion.get("dni").toString(),

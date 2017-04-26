@@ -168,4 +168,27 @@ public class GestionProfesional {
 		
 		return p;
 	}
+
+	public boolean comprobarInicioSesion(Datos datos){
+		Boolean res=false;
+		try {
+			// 1. establecer conexión con BD
+			Connection cn = DriverManager.getConnection("jdbc:mysql://"+ip+":"+port+"/"+nombredb, user, password);
+			// 2. Enviar instrucción SQL
+			Statement st = cn.createStatement();
+			String sql = "select * from datos where (email='" + datos.getEmail() + "' and contrasena='"+datos.getContrasena()+"')";
+			// 3. Manipulacion resultados
+			ResultSet rs = st.executeQuery(sql);
+			
+			if (rs.next()) {
+				res = true;
+			}
+			// 4. cierre conexión
+			cn.close();
+		} catch (SQLException ex) {
+			ex.printStackTrace();
+		}
+		
+		return res;
+	}
 }
