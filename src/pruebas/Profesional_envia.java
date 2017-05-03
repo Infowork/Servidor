@@ -23,26 +23,26 @@ public class Profesional_envia {
 			
 			
 			JSONObject jdatos=new JSONObject();
-				jdatos.put("dni", "123456A");
-				jdatos.put("empresa","Test2");
-				jdatos.put("nombre", "Nombre2");
-				jdatos.put("telefono", 222);
-				jdatos.put("email", "nombre2@test2.com");
-				jdatos.put("contrasena","test222");
+				jdatos.put("dni", "584963E");
+				jdatos.put("empresa","Jose Fontanería");
+				jdatos.put("nombre", "Jose Perez");
+				jdatos.put("telefono", 745822366);
+				jdatos.put("email", "jose@josefontaneria.com");
+				jdatos.put("contrasena","jose222");
 				jdatos.put("urgente", false);
-				jdatos.put("empleo","Limpieza");
+				jdatos.put("empleo","Fontanero");
 				
 			
 			JSONObject jloc=new JSONObject();
-				jloc.put("dni", "123456A");
-				jloc.put("latitud", 22.423);
-				jloc.put("longitud", 22.214);
+				jloc.put("dni", "584963E");
+				jloc.put("latitud", 40.402281);
+				jloc.put("longitud", -3.735135);
 				
 			
 			JSONObject jad=new JSONObject();
-				jad.put("dni", "123456A");
-				jad.put("titulo", "Titulo2");
-				jad.put("descripcion", "Prueba 2");
+				jad.put("dni", "584963E");
+				jad.put("titulo", "Fontanería para todos!");
+				jad.put("descripcion", "Pruebe nuestros increíbles servicios de fontanería en su domicilio o local comercial a un módico precio!!");
 			
 				
 			

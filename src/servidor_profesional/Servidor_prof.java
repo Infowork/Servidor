@@ -41,6 +41,10 @@ public class Servidor_prof {
 					System.out.println("Comprobar email/contrasena");
 					new HiloProfesional4(cliente).start();
 					break;
+				case "eee":
+					System.out.println("Comprobar DNI");
+					new HiloProfesional5(cliente).start();
+					break;
 				}
 			}
 		} catch (IOException ex) {

@@ -43,6 +43,8 @@ public class GestionCliente {
 			}
 			System.out.println(datos);
 			
+			
+			
 			// 2.2 Enviar instrucción SQL localizacion
 			String sql2 = "select * from localizacion where dni='"+dni+"'";
 			ResultSet rs2 = st.executeQuery(sql2);
@@ -70,6 +72,13 @@ public class GestionCliente {
 				comentarios.add(s);
 			}
 			punt=new Puntuacion(dni,comentarios,suma/total);
+			
+			String sql5 = "select * from empleados where dni='"+dni+"'";
+			ResultSet rs5 = st.executeQuery(sql5);
+			while (rs5.next()){
+				datos.setEmpleo(rs5.getString(2));
+				
+			}
 			// 4. Cierre de conexión
 			cn.close();
 			p=new Persona(datos,loc,ad,punt);

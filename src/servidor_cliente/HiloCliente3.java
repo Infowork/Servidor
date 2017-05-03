@@ -69,6 +69,7 @@ public class HiloCliente3 extends Thread{
 			jdatos.put("email", datos.getEmail());
 			jdatos.put("contrasena",datos.getContrasena());
 			jdatos.put("urgente", datos.isUrgente());
+			jdatos.put("empleo", datos.getEmpleo());
 			
 		Localizacion loc=p.getLoc();
 		JSONObject jloc=new JSONObject();
@@ -84,8 +85,9 @@ public class HiloCliente3 extends Thread{
 		Puntuacion punt=p.getPunt();
 		JSONObject jpunt=new JSONObject();
 			jpunt.put("dni", punt.getDni());
+			jpunt.put("total",punt.getReview().size());
 			for(int i=0;i<punt.getReview().size();i++){
-				jpunt.put("review", punt.getReview().get(i));
+				jpunt.put("review"+i, punt.getReview().get(i));
 			}
 			jpunt.put("puntuacion", punt.getPuntuacion());
 			

@@ -21,12 +21,9 @@ public class Profesional_recibe {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
-			//PrintStream salida2 = new PrintStream(sc.getOutputStream());
 			salida.println("25698321A");
 			salida.flush();
 			System.out.println("DNI enviado");
-			/*PrintStream salida3 = new PrintStream(sc.getOutputStream());
-			salida3.println("25698321A");*/
 
 			BufferedReader bf = new BufferedReader(new InputStreamReader(sc.getInputStream()));
 			String s = bf.readLine();
